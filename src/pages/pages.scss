@@ -1,0 +1,59 @@
+
+// General //
+
+h1{
+    font-family: 'Dongle', sans-serif;
+    text-align: center;
+    font-size:  60px;
+    color: #94d3ac;
+    margin-top: 8px;
+}
+
+// HOME PAGE //
+
+.homePagaContainer{
+        
+
+    .carousel-caption{
+        position:absolute;
+        right:0%;
+        left:0%;
+    }
+    .carouselContainer{
+        h3, p {
+
+            color:white;
+        }
+        .divCarousel{
+            border-radius: 10px;
+            background-color: rgba(0, 0, 0,0.3);
+            width: 100%;
+            
+        }
+    }
+    .articleContainer{
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        max-height: max-content;
+        .row{
+            margin-top: 20px;
+            margin-bottom: 20px
+        }
+
+        img{
+            width: 100%;
+            
+        }
+        .text-article{
+            text-indent: 30px;
+            font-size: 18px;
+            letter-spacing: normal;
+            line-height: 1.7;
+            text-align: left;
+        }
+
+    }
+}
+
+// PRODUCT PAGE //
+

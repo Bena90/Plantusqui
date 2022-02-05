@@ -1,0 +1,26 @@
+.cartContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+
+    .cartText{
+        display: flex;
+        justify-content:end;
+        width: 70%;
+        align-items: center;
+        p{
+            width: 50%;
+            margin-left: 5px;
+            margin-bottom: 0rem;
+        }
+        
+    }
+    .cartButton{
+        display: flex;
+        justify-content: center;
+        width: 30%;
+
+    }
+}

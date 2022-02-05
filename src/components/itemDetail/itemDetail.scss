@@ -1,0 +1,28 @@
+
+.detailContainer{
+    display:grid;
+    grid-template-areas: "img detail";
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    .imgDetail{
+        grid-area: img;
+        img{
+            width: 100%;
+        }
+    }
+    .textDetail{
+        grid-area: detail;
+        h6{
+            text-indent: 20px;
+            font-size: 20px;
+        }
+        .productDetails{
+            text-indent: 40px;
+
+        }
+        .buttonBuy{
+            display: flex;
+            justify-content: center;
+        }
+    } 
+}

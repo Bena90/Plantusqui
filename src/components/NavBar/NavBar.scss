@@ -1,0 +1,41 @@
+.navStyle{
+    background-color: #94d3ac58;
+}
+.navbar-brand{
+    padding-top:0px;
+    padding-bottom:0px;
+}
+.navbar {
+    padding-top:0px;
+    padding-bottom:0px;
+}
+.navTitle{
+    font-family: 'Dongle', sans-serif;
+    height: fit-content;
+    font-size: 40px;
+    list-style: none;
+    text-decoration: none;
+    color: inherit;
+    color: #655c56;
+    height: 100px;
+}
+.linkContent{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    color: #655c56;
+    width: 100%;
+    li{
+        font-family: 'Dongle', sans-serif;
+        float: right;
+        padding-top: 0.5rem;
+        margin-inline: 1rem;
+        font-size: 2rem;
+        .navLink{
+        list-style: none;
+        text-decoration: none;
+        color: inherit;
+        }
+    }
+}
+

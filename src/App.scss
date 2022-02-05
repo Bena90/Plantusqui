@@ -1,5 +1,14 @@
 .App {
   text-align: center;
+  background-color: #effcef2a;
+}
+
+.productDetailsPagesContainer{
+  .productDetailsPagesButton{
+  display: flex;
+  justify-content: center;
+
+  }
 }
 
 .App-logo {
@@ -11,6 +20,17 @@
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
+}
+
+.page-container{
+  display:flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content-wrap{
+  flex: 1;
+
 }
 
 .App-header {
@@ -36,3 +56,13 @@
     transform: rotate(360deg);
   }
 }
+
+
+// #effcef Verdesito claro
+// #ccedd2 Verdesito
+// #94d3ac Verdesito oscuro
+// #655c56 Marron
+
+// #fef5ed Beige
+// #adc2a9 Verderoncito
+// #99a799  Marroncito
