@@ -23,24 +23,26 @@ if(counter > 0){
 
 /* ------- Cart ------- */
   const [cart, setCart] = useState ([]);
-
+  let full = 0
   const addItem = (item, quantity) => {
     const newItem = {item, quantity}
-
-    setCart( (prevState) => [...prevState, newItem] )
-    setCounter (0)
-    console.log(newItem);
-    console.log(cart)
+    let findId= cart.findIndex(element => element.item.id === item.id)
     
-  }
+    if (findId < 0){
+      setCart((prevState) => [...prevState, newItem])
+      setCounter (0)
+    }else{
+      return full = 1;
+    };
+  };
   const clear = (e) => {
     e.preventDefault()
     setCart ([])
     setCounter (0);
-  }
+  };
 
   const deleteProd = (id) => {
-    setCart ( (prev) => prev.filter ((element) => element.item.id !== id)  )
+    setCart ((prev) => prev.filter ((element) => element.item.id !== id)  );
   };
 
 /* ------- Product ------- */
@@ -78,13 +80,9 @@ if(isLoading){
 }else{
   return (
 
-      <CartContext.Provider value={{productC, cart, addItem, suma, resta, clear, counter, deleteProd}}>
+      <CartContext.Provider value={{productC, cart, addItem, suma, resta, clear, counter, setCounter, deleteProd, full}}>
          {children}
       </CartContext.Provider>
       );
   };
 };
-
-
-
-

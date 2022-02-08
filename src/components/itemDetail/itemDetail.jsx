@@ -6,10 +6,16 @@ import { CartContext } from '../../context/cartContext';
 
 const ItemDetail = ({product}) => {
 
-    const { cart, addItem, counter , suma , resta } = useContext(CartContext);
+    const { addItem, counter , suma , resta, cart } = useContext(CartContext);
 
     const handleClick = () => {
         addItem(product, counter)
+    }
+
+    const checkCart = () =>{
+        if (cart.findIndex(element => element.item.id === product.id) >= 0) {
+        return true;
+        }
     }
 
     return (
@@ -26,7 +32,9 @@ const ItemDetail = ({product}) => {
                     <hr/>
                     <Counter counter={counter} suma={suma} resta={resta}/>
                     <div className="buttonBuy">
-                        <Button variant="success" onClick={handleClick}>Comprar</Button>
+                        { checkCart() ? <Button variant="danger" size ='sm'> Agregado al Carro </Button> : 
+                        <Button variant="success" size ='sm' onClick={handleClick}>Comprar</Button>}
+
                     </div>
 
                 </div>

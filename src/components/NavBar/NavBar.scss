@@ -39,3 +39,25 @@
     }
 }
 
+.cartIconContainer{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
+    .indexDiv{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: red;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        color: white;
+        font-size: 25px;
+
+    }
+    .cartIndex{
+        margin-top: 3px;
+    }
+}
+

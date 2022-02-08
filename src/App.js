@@ -11,11 +11,9 @@ import ContactPage from './pages/ContactPage';
 import NotFoundPage from './pages/NotFoundPage';
 import ProductDetailsPage from './pages/ProductDetailsPage';
 import { CartProvider } from './context/cartContext';
-
-
+import CartPage from './pages/Cart';
 
 function App() {
-
 
   return (
     <CartProvider>
@@ -27,9 +25,10 @@ function App() {
                 <Route path="/">
                     <Route index element={<HomePage/>}/>
                     <Route path="products">
-                    <Route index element={<ProductPage/>} />
+                      <Route index element={<ProductPage/>} />
                       <Route path=":productId" element={<ProductDetailsPage/>} />
                     </Route>
+                    <Route path="cart" element={<CartPage/>}/>
                     <Route path="about" element={<AboutPage/>}/>
                     <Route path="contact" element={<ContactPage/>}/>
                     <Route path="*" element={<NotFoundPage/>}/>

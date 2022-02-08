@@ -1,10 +1,12 @@
-import { useEffect, useState, useContext } from 'react';
+import { useEffect, useState} from 'react';
 import { Button, Spinner } from 'react-bootstrap';
 import { useParams } from 'react-router-dom';
+import { CartContext } from '../../context/cartContext';
 import ItemDetail from '../itemDetail/itemDetail';
 import './itemDetailContainer.scss';
 
 const ItemDetailContainer = () => {
+
 
     const {productId} = useParams()
     const [product, setProducts] = useState ([])
@@ -12,6 +14,7 @@ const ItemDetailContainer = () => {
     const [error, setError] = useState (null)
 
     useEffect(()=> {
+
         setIsLoading (true);
         const urlProduct = `http://localhost:3001/productos/${productId}`
 
