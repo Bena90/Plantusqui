@@ -6,15 +6,13 @@ import { CartContext } from "../context/cartContext";
 
 const ProductDetailsPage = () => {
     const { setCounter } = useContext (CartContext);
-    
+
     const navigate = useNavigate ();
 
     const comeBack = () => {
         setCounter (0)
         navigate ("/products");
     }
-
-
     return(
         <div className="productDetailsPagesContainer">
             <h1>Detalle de producto</h1>

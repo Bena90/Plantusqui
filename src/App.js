@@ -11,7 +11,7 @@ import ContactPage from './pages/ContactPage';
 import NotFoundPage from './pages/NotFoundPage';
 import ProductDetailsPage from './pages/ProductDetailsPage';
 import { CartProvider } from './context/cartContext';
-import CartPage from './pages/Cart';
+import CartPage from './pages/CartPage';
 
 function App() {
 

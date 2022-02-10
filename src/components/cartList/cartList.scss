@@ -1,4 +1,28 @@
-.cartListContainer{
-    border: 2px outset #adc2a9;
-    border-radius: 10px;
+.emptyCart{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    font-family: 'Itim', cursive;
+    text-align: center;
+    font-size:  45px;
+    color: #8ac5a1;
+    margin-top: 8px;
+    @media (max-width: 1000px) {
+        font-size: 30px;
+    }
+
+
+    .emptyCartImg{
+        display: flex;
+        justify-content: center;     
+        img{
+            max-width: 800px;
+        }
+        @media (max-width: 800px) {
+            img{
+                width: 100%;
+            }
+        }
+    }
 }

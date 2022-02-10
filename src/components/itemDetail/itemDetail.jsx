@@ -6,7 +6,7 @@ import { CartContext } from '../../context/cartContext';
 
 const ItemDetail = ({product}) => {
 
-    const { addItem, counter , suma , resta, cart } = useContext(CartContext);
+    const { addItem, counter , suma , resta, cart, deleteProd } = useContext(CartContext);
 
     const handleClick = () => {
         addItem(product, counter)
@@ -28,14 +28,22 @@ const ItemDetail = ({product}) => {
                     <h2>{product.name} </h2>
                     <h6>Descripción: {product.description}</h6>
                     <p className ="productDetails">{product.fullDetails}</p>
-                    <p><strong>Precio: {product.price}</strong></p>
+                    <p><strong>Precio: $ {product.price}</strong></p>
                     <hr/>
-                    <Counter counter={counter} suma={suma} resta={resta}/>
+                    
+                    { checkCart() ? (
                     <div className="buttonBuy">
-                        { checkCart() ? <Button variant="danger" size ='sm'> Agregado al Carro </Button> : 
-                        <Button variant="success" size ='sm' onClick={handleClick}>Comprar</Button>}
+                        <Button variant="danger" size ='sm' onClick={() => deleteProd (product.id)}> Quitar del Carro </Button>
+                    </div>) : (                     
+                    <div className="buttonBuy">
+                        <Counter counter={counter} suma={suma} resta={resta}/>
 
-                    </div>
+                        <Button variant="success" size ='sm' onClick={handleClick}>Comprar</Button>
+
+                    </div>                        
+                    )}
+
+
 
                 </div>
             </div>

@@ -21,6 +21,9 @@ h1{
     }
     .carouselContainer{
         h3, p {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 400;
+            text-indent: 30px;
 
             color:white;
         }
@@ -35,16 +38,30 @@ h1{
         margin-top: 2rem;
         margin-bottom: 2rem;
         max-height: max-content;
-        .row{
-            margin-top: 20px;
-            margin-bottom: 20px
+        .btn-success{
+            background-color: #ccedd2;
+            border-color: #effcef;
+            color: #655c56;
+            border-radius: 15px;
+            font-family: 'Dongle', sans-serif;
+            font-size: 30px;
+        }
+        .btn-success:hover{
+            background-color: #94d3ac;
+        }
+        .articleRow{
+            margin-top: 30px;
+            margin-bottom: 30px
         }
 
         img{
             width: 100%;
+            border-radius: 2%;
             
         }
         .text-article{
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 400;
             text-indent: 30px;
             font-size: 18px;
             letter-spacing: normal;
@@ -55,5 +72,32 @@ h1{
     }
 }
 
-// PRODUCT PAGE //
+// ABOUT PAGE //
+.aboutContainer{
+    img{
+        width: 100%;
+        border-radius: 2%;
+    }
+    .aboutText{
+        font-family: 'Montserrat', sans-serif;
+        font-size: 17px;
+        font-weight: 400;
+    }
+    .aboutRow{
+        margin: 1rem;
+        align-items: center;
+    }
+    font-size: 18px;
+    letter-spacing: normal;
+    line-height: 1.7;
+    text-align: left;
+    margin-bottom: 30px;
+    h2{
+        font-family: 'Dongle', sans-serif;
+        text-align: center;
+        font-size:  50px;
+        color: #94d3ac;
+        margin-top: 1.5rem;
 
+    }
+}

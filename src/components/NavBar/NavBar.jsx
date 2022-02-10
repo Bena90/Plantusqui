@@ -39,13 +39,11 @@ const NavBar = () => {
                             <li>
                                 <Link className="navLink" to="cart">
                                     <div className='cartIconContainer'>
-                                        <i src={cartIcon} alt="LogoCart"> Cart </i>
-                                        
-                                            {cart.length > 0 && 
-                                                                <div className="indexDiv">
-                                                                    <span className="cartIndex">{cart.length}</span>
-                                                                </div>}
-                                        
+                                        <img src={cartIcon} alt="cartIcon" />
+                                        {cart.length > 0 && 
+                                            <div className="indexDiv">
+                                                <span className="cartIndex">{cart.length}</span>
+                                            </div>}                                        
                                     </div>
                                 </Link>
                             </li>

@@ -1,4 +1,5 @@
 import { Container } from "react-bootstrap";
+import { getFirestore } from "../firebase";
 
 const handleSubmit = (e) => {
     e.preventDefault ()
@@ -8,12 +9,28 @@ const handleSubmit = (e) => {
         });
 }
 
+
+
 const ContactPage = () => {
+
+//   Carga de productos ---------*   
+//    const db = getFirestore()
+//    const collection = db.collection ('products')
+//    const agregarDatos = () => {
+//        PRODUCTS.forEach( (product) => {
+//            collection
+//            .add(product)
+//            .then((response) => console.log ('producto agregado:', response.id))
+//            .catch((err) => console.log ('Se rompio', err));
+//        });
+//    };
 
     return (
 
+//        <button onClick={agregarDatos}> Agregar a Firestore</button>
+
         <Container>
-            <h3>Contactanos llenando el siguiente formulario: </h3>
+            <h1>Contactate con nosotros: </h1>
             <form onSubmit={handleSubmit}>
                 <label htmlFor="nombre"> Nombre </label>
                 <input type="text" name="nombre" id='nombre'/>

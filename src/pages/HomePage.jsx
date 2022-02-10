@@ -4,8 +4,7 @@ import first from '../assets/1.jpg'
 import second from '../assets/2.jpg'
 import third from '../assets/3.jpg'
 import article1 from '../assets/4.png'
-import { UserContext } from '../context/cartContext';
-import { useContext } from 'react';
+
 
 
 const HomePage = () => {
@@ -66,28 +65,28 @@ const HomePage = () => {
                 </section>
                 <section className="articleContainer">
                     <Row>
-                        <Col xs={12} md={6}>
+                        <Col xs={12} md={4}>
                             <img src={article1} alt="" />
                         </Col>
-                        <Col xs={12} md={6} className="text-article">
+                        <Col xs={12} md={8} className="text-article">
                             <h2>¿Usas fertilizantes?</h2>
                             <hr />
                             <p>Hola amigues de Plantusqui! Hoy les traemos data útil sobre fertilizantes, sus tipos y usos. Nos parece muy importante entender que nuestras plantas necesitan un buen alimento para su sano y buen crecimiento. 
                             Hacernos una rutina para darle morfi a las plantus es tan necesario como regarlas.
                             </p>
-                            <Button variant="success">Ver mas...</Button>
+                            <Button variant="success" size='sm'>Ver...</Button>
                         </Col>
                     </Row>
-                    <Row>
-                        <Col xs={12} md={6} className="text-article">
+                    <Row className="articleRow">
+                        <Col xs={12} md={8} className="text-article">
                             <h2>¿Usas fertilizantes?</h2>
                             <hr />
                             <p>Hola amigues de Plantusqui! Hoy les traemos data útil sobre fertilizantes, sus tipos y usos. Nos parece muy importante entender que nuestras plantas necesitan un buen alimento para su sano y buen crecimiento. 
-                            Hacernos una rutina para darle morfi a las plantus es tan necesario como regarlas.
+                            Hacernos una rutina para darle morfi a las plantus es tan necesario como regarlas 🌲.💚
                             </p>
-                            <Button variant="success">Ver mas...</Button>
+                            <Button variant="success" size='sm'>Ver...</Button>
                         </Col>
-                        <Col xs={12} md={6}>
+                        <Col xs={12} md={4}>
                             <img src={article1} alt="" />
                         </Col>
                     </Row>

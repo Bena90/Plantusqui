@@ -1,4 +1,7 @@
 import './footer.scss';
+import instagram from '../../assets/instagram.png'
+import whatsapp from '../../assets/whatsapp.png'
+import facebook from '../../assets/facebook.png'
 
 const Footer = () => {
 
@@ -20,24 +23,23 @@ const Footer = () => {
                     <div className="col">
                         <h4>Staff</h4>
                         <ul className="list-unstyled">
-                            <li>Empty</li>
-                            <li>Empty</li>
-                            <li>Empty</li>
+                            <li>Fede 🧑‍</li>
+                            <li>Stefy 👩</li>
                         </ul>
                     </div>
                     {/*column3*/}
                     <div className="col">
                         <h4>Redes sociales</h4>
-                        <ul className="list-unstyled">
-                            <li>Instagram</li>
-                            <li>Facebook</li>
-                            <li>Whatsapp</li>
-                        </ul>
+                        <div className="list-social-media">
+                            <a href="https://www.facebook.com/"><img src={instagram}/></a>
+                            <a href="https://www.instagram.com/"><img src={facebook}/></a>
+                            <a href="https://www.instagram.com/"><img src={whatsapp}/></a>
+                        </div>
                     </div>
                     <hr />
                     <div className="row">
                         <p className='col-sm'>
-                            &copy;{new Date().getFullYear()} Thic Memes Inc | All right reserve | Terms Of Service | Privacy
+                            &copy;{new Date().getFullYear()} Thic Memes Inc | All right reserve | Terms Of Service | Plantusqui by Esteban Benabarre
                         </p>
                     </div>
                 </div>

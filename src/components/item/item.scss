@@ -3,21 +3,37 @@
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    border: 2px outset #adc2a9;
-    border-radius: 10px;
+    border-radius: 1rem;
+    box-shadow: 0.2rem 0.4rem 0.5rem rgba(37, 10, 10, 0.4);
     width: 400px;
     margin: 4px;
     color: #655c56;
-    background-color: rgba(148, 211, 172, 0.3);
+    background-color: rgba(148, 211, 172, 0.1);
+    transition: all 0.4s ease-out;
+    margin: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
 
     .itemButton{
-        margin: 5px;
+
+    }
+    .btn-success{
+        background-color: #ccedd2;
+        border-color: #effcef;
+        color: #655c56;
+        border-radius: 15px;
+        font-family: 'Dongle', sans-serif;
+        font-size: 30px;
+
+    }
+    .btn-success:hover{
+        background-color: #94d3ac;
     }
     
     .itemImg{
         background-color: white;
         border: 2px none white;
-        border-radius: 10px;
+        border-radius: 10px 10px 0px 0px;
         img{
             padding: 5px 0px;
             width: 100%;
