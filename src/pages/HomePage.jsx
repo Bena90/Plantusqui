@@ -5,11 +5,8 @@ import second from '../assets/2.jpg'
 import third from '../assets/3.jpg'
 import article1 from '../assets/4.png'
 
-
-
 const HomePage = () => {
 
-    //const { name, email, img } = useContext(UserContext)
 
     return (
         <Container>
@@ -38,7 +35,6 @@ const HomePage = () => {
                                     src={second}
                                     alt="Segunda Imagen"
                                     />
-
                                     <Carousel.Caption>
                                         <div className="divCarousel">
                                             <h3>Segunda Imagen</h3>
@@ -52,7 +48,6 @@ const HomePage = () => {
                                     src={third}
                                     alt="Tercera Imagen"
                                     />
-
                                     <Carousel.Caption>
                                     <div className="divCarousel">
                                             <h3>Tercera Imagen</h3>

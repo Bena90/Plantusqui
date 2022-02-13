@@ -1,3 +1,12 @@
+.linkDropStyle{
+    text-decoration: none;
+}
+
+.dropDownStyle{
+    font-family: 'Montserrat', sans-serif;
+
+}
+
 .navStyle{
     background-color: #94d3ac58;
 }
@@ -57,6 +66,8 @@
         height: 15px;
         color: white;
         font-size: 20px;
+        position:absolute;
+        margin-left: 20px;
 
     }
     .cartIndex{

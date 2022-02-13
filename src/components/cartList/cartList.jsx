@@ -9,9 +9,6 @@ import emptyCart from '../../assets/preview.png'
 const CartList = () =>{
     const { cart, deleteProd } = useContext(CartContext);
 
-
-
-
     if (cart.length === 0){
         return (
             <Container>
@@ -32,6 +29,7 @@ const CartList = () =>{
                 <div className="cartListContainer">
                     {cart.map ((product) => ( <CartItem key={product.item.id} product={product} remove={deleteProd}/>) )}
                 </div>
+
     )};
 };
 export default CartList;

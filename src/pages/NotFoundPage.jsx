@@ -1,15 +1,18 @@
+import { Container } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
 
 const NotFoundPage = () => {
     const navigate = useNavigate()
 
     return(
-        <div>
-            <h1>404 Error Not Found</h1>
-            <Link to='/'> Volver </Link>
-            <div>o</div>
-            <button onClick={ () => navigate(`/`) }>Volver</button>
-        </div>
+        <Container>
+            <div className="notFoundContainer">
+                <h1>Oops!! Estás perdido?</h1>
+                <h2>Te ayudo a volver. Haz click aquí:</h2>
+                <hr/>
+                <button onClick={ () => navigate(`/`) }>Volver</button>
+            </div>
+        </Container>
     );
 
 };

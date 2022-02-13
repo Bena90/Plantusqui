@@ -1,14 +1,15 @@
 import './NavBar.scss'
 import { Link } from "react-router-dom";
-import { Navbar, Nav, Container } from 'react-bootstrap';
+import { Navbar, Nav, Container, NavDropdown } from 'react-bootstrap';
 import logo from './logo192.png'
 import cartIcon from '../../assets/cart.png'
 import { CartContext } from '../../context/cartContext';
 import { useContext } from 'react';
+import { useAuth } from '../../context/authContext';
 
 const NavBar = () => {
     const { cart } = useContext(CartContext);
-
+    const { currentUser } = useAuth();
     return(
         <Navbar className='navStyle' collapseOnSelect expand="lg">
             <Container>
@@ -36,6 +37,23 @@ const NavBar = () => {
                             <li>
                                 <Link className="navLink" to="contact">Contact</Link>
                             </li>
+                        
+                            {(currentUser === null) ? (
+                                <NavDropdown title="account_circle" className="material-icons-outlined" id="basic-nav-dropdown">
+                                    <Link to="/Login" className="linkDropStyle" >
+                                        <NavDropdown.Item className="dropDownStyle" href="#action/3.2">Login</NavDropdown.Item>
+                                    </Link>
+                                </NavDropdown>
+                            ):(
+                                <NavDropdown title="account_circle" className="material-icons-outlined" id="basic-nav-dropdown">
+                                    <Link to="/panel" className="linkDropStyle" >
+                                        <NavDropdown.Item className="dropDownStyle" href="#action/3.2">Ordenes</NavDropdown.Item>
+                                    </Link>
+                                    <Link to="/panel" className="linkDropStyle" >
+                                        <NavDropdown.Item className="dropDownStyle" href="#action/3.3"> Panel Usuario</NavDropdown.Item>
+                                    </Link>
+                                </NavDropdown>
+                            )}
                             <li>
                                 <Link className="navLink" to="cart">
                                     <div className='cartIconContainer'>
@@ -43,7 +61,7 @@ const NavBar = () => {
                                         {cart.length > 0 && 
                                             <div className="indexDiv">
                                                 <span className="cartIndex">{cart.length}</span>
-                                            </div>}                                        
+                                        </div>}                                        
                                     </div>
                                 </Link>
                             </li>

@@ -26,3 +26,22 @@
         }
     }
 }
+
+
+.formContainer{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        font-family: 'Montserrat', sans-serif;
+    .formField{
+        max-width: 400px;
+        margin: 15px;
+        border-color: #ccedd2;
+    }
+    .buttonForm{
+        max-width: fit-content;
+        border-color: #94d3ac;
+        background-color: #ccedd2;
+        border-radius: 20px;
+    }
+}

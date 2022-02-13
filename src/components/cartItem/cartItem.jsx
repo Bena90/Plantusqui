@@ -15,11 +15,11 @@ const CartItem = ( { product, remove } ) => {
     return(
         <Container>
             <Row className="cartContainer">
-                <Col className="cartImg" xs={12} md={3}>
+                <Col className="cartImg" xs={12} md={5}>
                     <img src={product.item.img} alt="" />
                 </Col>
-                <Col className='cartText'xs={12} md={9}>
-                    <p className="nameCart"> {product. item.name} </p>
+                <Col className='cartText'xs={12} md={7}>
+                    <p className="nameCart">{product.item.name}</p>
                     <p>Precio unitario: $ {product.item.price} </p>
                     <div className="cartCounter">
                         <button onClick={ () => handleQuantityLess(product.item.id)}> - </button>

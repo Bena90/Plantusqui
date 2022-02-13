@@ -12,24 +12,19 @@ export const CartProvider = ({children}) => {
   const [counter , setCounter] = useState (0);
 
   /*Function counter*/ 
-  const suma = () => {
-  setCounter ((prevCounter) => prevCounter + 1);
+  const suma = () => setCounter ((prevCounter) => prevCounter + 1)
 
-  }
   const resta = () => {
   if(counter > 0){
       setCounter ((prevCounter) => prevCounter - 1);
-  };
-  };
+  }};
 
   /* ------- Cart ------- */
     const [cart, setCart] = useState ([]);
 
     const addItem = (item, quantity) => {
       const newItem = {item, quantity}
-      console.log (newItem)
       let findId = cart.findIndex(element => element.item.id === item.id)
-      
       if (findId < 0 && quantity !== 0){
         setCart((prevState) => [...prevState, newItem])
         setCounter (0)
@@ -50,7 +45,8 @@ export const CartProvider = ({children}) => {
       newCart.map ( (item) => {
         if (item.quantity >0 )
         {item.item.id === id && (item.quantity -= 1)}
-      }  )
+        return newCart
+      })
       setCart(newCart);
     }
 
@@ -58,9 +54,18 @@ export const CartProvider = ({children}) => {
       const newCart = [...cart]
       newCart.map ( (item) => {
         item.item.id === id && (item.quantity += 1)
-      }  )
+        return newCart
+      })
       setCart(newCart);
     }
+
+    const getTotal = (cart) => {
+      let total = 0;
+      cart.forEach((prod) => {
+        total += prod.item.price * prod.quantity
+      });
+      return total;
+    };
 
   /* ------- Product ------- */
     const [productC, setProducts] = useState ({});
@@ -82,6 +87,8 @@ export const CartProvider = ({children}) => {
 
    }, [])
 
+
+
 if(isLoading){
   return (
     <div className='spinnerContainer'>
@@ -102,7 +109,7 @@ if(isLoading){
 }else{
   return (
 
-      <CartContext.Provider value={{productC, cart, addItem, suma, resta, clear, counter, setCounter, deleteProd, handleQuantityPlus, handleQuantityLess}}>
+      <CartContext.Provider value={{productC, cart, setCart, addItem, suma, resta, clear, counter, setCounter, deleteProd, handleQuantityPlus, handleQuantityLess, getTotal}}>
          {children}
       </CartContext.Provider>
       );
