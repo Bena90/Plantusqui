@@ -30,7 +30,7 @@ const ForgotPassword = () => {
         <Container>
             <Card className="m-4">
                 <Card.Body >
-                    <h2 className ="text-center mb-4">Reestablecer Contraseña</h2>
+                    <h1 className ="cardTitle text-center mb-4">Reestablecer Contraseña</h1>
                     {error && <Alert variant="danger"> {error} </Alert>}
                     {message && <Alert variant="success"> {message} </Alert>}
                     <Form onSubmit={handleSubmit}>
@@ -38,15 +38,15 @@ const ForgotPassword = () => {
                             <Form.Label>Email</Form.Label>
                             <Form.Control type='email' ref={emailRef} required />
                         </Form.Group>
-                        <Button disabled= {isLoading} className='w-100 mt-4' type ='submit'> Reestablecer Contraseña </Button>
+                        <Button disabled= {isLoading} variant="success" className='w-100 mt-4' type ='submit'> Reestablecer Contraseña </Button>
                     </Form>
-                    <Button disabled= {isLoading} className='w-100 mt-4' type ='submit' onClick={()=>navigate('/login')}>
+                    <Button disabled= {isLoading} variant="success" className='w-100 mt-4' type ='submit' onClick={()=>navigate('/login')}>
                         Iniciar Sesión
                     </Button>
                 </Card.Body>
             </Card>
             <div className="w-100 text-center mt-2">
-                Si no tenés cuenta, registrate <Link to='/singup'>aquí </Link>.
+                Si no tenés cuenta, registrate <Link to='/signup'>aquí </Link>.
             </div>
         </Container>
         )

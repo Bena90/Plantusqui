@@ -1,0 +1,28 @@
+// ORDERS
+
+
+// ORDERS-ITEM
+.orderStyle{
+    border-radius: 15px;
+    box-shadow: 0.1rem 0.1rem 0.5rem rgba(37, 10, 10, 0.4);
+    font-family: 'Montserrat', sans-serif;
+    padding: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    .order-flex{
+
+        .lineTotal{
+            font-size: 20px;
+            font-weight: 500;
+            text-align: center;
+        }
+    }
+}
+.cartEmpty{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h4{
+        font-family: 'Montserrat', sans-serif;
+    }
+}

@@ -40,17 +40,14 @@ const NavBar = () => {
                         
                             {(currentUser === null) ? (
                                 <NavDropdown title="account_circle" className="material-icons-outlined" id="basic-nav-dropdown">
-                                    <Link to="/Login" className="linkDropStyle" >
-                                        <NavDropdown.Item className="dropDownStyle" href="#action/3.2">Login</NavDropdown.Item>
+                                    <Link to="/login" className= "dropDownStyle" >
+                                        Login
                                     </Link>
                                 </NavDropdown>
                             ):(
                                 <NavDropdown title="account_circle" className="material-icons-outlined" id="basic-nav-dropdown">
-                                    <Link to="/panel" className="linkDropStyle" >
-                                        <NavDropdown.Item className="dropDownStyle" href="#action/3.2">Ordenes</NavDropdown.Item>
-                                    </Link>
-                                    <Link to="/panel" className="linkDropStyle" >
-                                        <NavDropdown.Item className="dropDownStyle" href="#action/3.3"> Panel Usuario</NavDropdown.Item>
+                                    <Link to="/panel" className= "dropDownStyle" >
+                                        Panel Usuario
                                     </Link>
                                 </NavDropdown>
                             )}

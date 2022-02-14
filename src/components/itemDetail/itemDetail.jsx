@@ -1,11 +1,14 @@
+import React from 'react';
 import './itemDetail.scss';
 import { Button, Container } from 'react-bootstrap';
 import Counter from '../counter/counter';
 import { useContext } from 'react';
 import { CartContext } from '../../context/cartContext';
+import { useNavigate } from "react-router-dom";
+
 
 const ItemDetail = ({product}) => {
-
+    const navigate = useNavigate();
     const { addItem, counter , suma , resta, cart, deleteProd } = useContext(CartContext);
 
     const handleClick = () => {
@@ -33,7 +36,10 @@ const ItemDetail = ({product}) => {
                     
                     { checkCart() ? (
                     <div className="buttonBuy">
+                        <Button variant="success" size ='sm' onClick={() => navigate('/cart')}> Ir del Carro </Button>
+                        <hr />
                         <Button variant="danger" size ='sm' onClick={() => deleteProd (product.id)}> Quitar del Carro </Button>
+
                     </div>) : (                     
                     <div className="buttonBuy">
                         <Counter counter={counter} suma={suma} resta={resta}/>

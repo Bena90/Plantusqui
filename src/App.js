@@ -19,6 +19,10 @@ import LoginPage from './pages/LoginPage';
 import PanelUser from './pages/PanelUser';
 import ForgotPage from './pages/ForgotPage';
 import UpdateProfilePage from './pages/UpdateProfilePage';
+import Article1 from './pages/Article1';
+import Article2 from './pages/Article2';
+
+
 
 function App() {
 
@@ -32,6 +36,8 @@ function App() {
               <Routes>
                   <Route path="/">
                       <Route index element={<HomePage/>}/>
+                      <Route path="article1" element={<Article1/>} />
+                      <Route path="article2" element={<Article2/>} />
                       <Route path="products">
                         <Route index element={<ProductPage/>} />
                         <Route path=":productId" element={<ProductDetailsPage/>} />

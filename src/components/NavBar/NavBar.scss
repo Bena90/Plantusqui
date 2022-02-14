@@ -3,8 +3,13 @@
 }
 
 .dropDownStyle{
+    text-decoration: none;
     font-family: 'Montserrat', sans-serif;
-
+    color: #655c56;
+    margin-left: 15px;
+}
+.dropdown-men{
+    text-align: center;
 }
 
 .navStyle{
@@ -46,6 +51,17 @@
         color: inherit;
         }
     }
+}
+.btn-success {
+    background-color: #ccedd2;
+    color: #655c56;
+    border-color: #94d3ac;
+  }
+
+.btn-danger{
+    background-color: rgb(255, 120, 120);
+    color: #ffffff;
+    border-color: rgb(255, 59, 59);
 }
 
 .cartIconContainer{

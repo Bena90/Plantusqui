@@ -62,7 +62,7 @@ const UpdateProfile = () => {
                             <Form.Label>Password Confirmation</Form.Label>
                             <Form.Control type='password' ref={passwordConfirmRef} placeholder="Dejar en blanco si no desea modificar"/>
                         </Form.Group>
-                        <Button disabled= {isLoading} className='w-100 mt-4' type ='submit' onClick={handleSubmit}> Actualizar </Button>
+                        <Button disabled= {isLoading} variant="success" className='w-100 mt-4' type ='submit' onClick={handleSubmit}> Actualizar </Button>
                     </Form>
                 </Card.Body>
             </Card>

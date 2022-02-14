@@ -42,7 +42,7 @@ const Login = () => {
         <Container>
             <Card className="m-4">
                 <Card.Body >
-                    <h2 className ="text-center mb-4">Login</h2>
+                    <h1 className =" cardTitle text-center mb-2">Login</h1>
                     {error && <Alert variant="danger"> {error} </Alert>}
                     <Form onSubmit={handleSubmit}>
                         <Form.Group id='email'>
@@ -53,14 +53,14 @@ const Login = () => {
                             <Form.Label>Password</Form.Label>
                             <Form.Control type='password' ref={passwordRef} required />
                         </Form.Group>
-                        <Button disabled= {isLoading} className='w-100 mt-4' type ='submit'> Ingresar </Button>
+                        <Button disabled= {isLoading} variant="success" className='w-100 mt-4' type ='submit'> Ingresar </Button>
                     </Form>
                     <hr />
                         <button type="button" className="login-with-google-btn w-100" disabled={isLoading} onClick={handleGoogleAuth}>
                             Sign in with Google
                         </button>
                     <hr />
-                    <Button disabled= {isLoading} className='w-100 mt-1' type ='submit' onClick={()=>navigate('/forgot')}>
+                    <Button aria-disabled= {isLoading} variant="success" className='w-100 mt-1' type ='submit' onClick={()=>navigate('/forgot')}>
                         Olvidaste la contraseña?
                     </Button>
                 </Card.Body>

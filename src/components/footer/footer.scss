@@ -1,12 +1,15 @@
 .main-footer{
-    
-    background-color: #94d3ac;;
-    color: rgba(0, 0, 0, 0.7);
-    padding-top: 1rem;
+    font-family: 'Montserrat', sans-serif;
+
+    color: white;
+
     position: relative;
     bottom: 0;
     width: 100%;
-    margin-top: 1rem;
+    .containerFooter{
+        padding-top: 1rem;
+        background-color: #4A7221;
+    }
 
 }
 .list-unstyled{

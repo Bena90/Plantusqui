@@ -8,10 +8,6 @@ import './cartItem.scss';
 const CartItem = ( { product, remove } ) => {
 
     const { handleQuantityPlus, handleQuantityLess } = useContext(CartContext);
-
-
-
-
     return(
         <Container>
             <Row className="cartContainer">

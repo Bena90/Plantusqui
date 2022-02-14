@@ -12,7 +12,6 @@ h1{
 // HOME PAGE //
 
 .homePagaContainer{
-        
 
     .carousel-caption{
         position:absolute;
@@ -35,23 +34,23 @@ h1{
         }
     }
     .articleContainer{
-        margin-top: 2rem;
-        margin-bottom: 2rem;
         max-height: max-content;
-        .btn-success{
-            background-color: #ccedd2;
-            border-color: #effcef;
-            color: #655c56;
-            border-radius: 15px;
-            font-family: 'Dongle', sans-serif;
-            font-size: 30px;
+        .articleDivision{
+            height: 100px;
         }
+        .btn-success {
+            background-color: #ccedd2;
+            color: #655c56;
+            border-color: #94d3ac;
+            font-size: 1.1rem;
+          }
         .btn-success:hover{
             background-color: #94d3ac;
         }
         .articleRow{
-            margin-top: 30px;
-            margin-bottom: 30px
+            margin-top: 20px;
+            margin-bottom: 20px;
+            align-items: center;
         }
 
         img{
@@ -67,6 +66,7 @@ h1{
             letter-spacing: normal;
             line-height: 1.7;
             text-align: left;
+
         }
 
     }
@@ -100,6 +100,86 @@ h1{
         margin-top: 1.5rem;
 
     }
+}
+// ARTICLE PAGE //
+
+.articleContainer{
+    h2{
+        font-family: 'Itim', cursive;
+        font-size: 40px;
+        color: #94d3ac;
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 20px;
+
+    }
+    .introStyle{
+        text-align: center;
+        font-size: 19px;
+    }
+    h3, h4{
+        color: #94d3ac;
+        font-weight: 600;
+    }
+
+    .imgArticle{
+
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        .imgContainer{
+            max-width: 100vh;
+        }
+    }
+    
+    .textArticle{
+        text-indent: 30px;
+        letter-spacing: normal;
+        line-height: 1.7;
+        text-align: left;
+        font-size: 17px;
+        font-weight: 500;
+    }
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+
+// PANEL USER //
+.panelTitle{
+    font-family: 'Itim', cursive;
+    color: #94d3ac;
+}
+
+// CHECKOUT PAGE //
+.checkOutContainer{
+    box-shadow: 0.1rem 0.1rem 0.5rem rgba(37, 10, 10, 0.4);
+    padding: 2rem;
+    border-radius: 5px;
+    font-family: 'Montserrat', sans-serif;
+    color: #3d3835;
+    strong{
+        font-weight: 600;
+    }
+
+}
+
+// CONTACT PAGE // 
+.contactStyle{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+    box-shadow: 0.1rem 0.1rem 0.5rem rgba(37, 10, 10, 0.4);
+    border-radius: 5px;
+    h2{
+        font-family: 'Itim', cursive;
+        color: #94d3ac;
+    }
+    .comment{
+        height: 200px;
+    }
+
 }
 
 // NOT FOUND PAGE //

@@ -7,7 +7,6 @@ const ForgotPage = () => {
 
     return(
         <Container>
-            <h1>Olvidaste la contra champi?</h1>
             <ForgotPassword/>
         </Container>
     )
