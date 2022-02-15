@@ -32,6 +32,6 @@ Instalá mi proyecto:
 ```bash
   npm start
 ```
-La aplicación se va a abrir automáticamente. Si no se abre, puedes ir al navegador y escribir http:///localhost:3000. 
+La aplicación se va a abrir automáticamente. Si no se abre, puedes ir al navegador y escribir http://localhost:3000. 
 
 <h3> Espero la disfrutes 🤝 y me comentes qué te pareció 💬.</h3>
