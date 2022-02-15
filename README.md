@@ -21,7 +21,7 @@ Instalá mi proyecto:
 2) En la terminal cambia el directorio de trabajo actual a la ubicación en donde quieres clonar el directorio.
 3) Escribe 
 ```bash
-  git clone https://github.com/Bena90/proyect_plantusqui.git
+  git clone https://github.com/Bena90/Plantusqui.git
 ```
 4) Luego
 ```bash
