@@ -7,13 +7,12 @@ CartContext.displayName = 'ProductsCart'
 
 export const CartProvider = ({children}) => {
 
-
   /* ------- Counter ------- */
   const [counter , setCounter] = useState (0);
+  const [navCounter , setNavCounter] = useState (0);
 
   /*Function counter*/ 
   const suma = () => setCounter ((prevCounter) => prevCounter + 1)
-
   const resta = () => {
   if(counter > 0){
       setCounter ((prevCounter) => prevCounter - 1);
@@ -21,12 +20,12 @@ export const CartProvider = ({children}) => {
 
   /* ------- Cart ------- */
     const [cart, setCart] = useState ([]);
-
     const addItem = (item, quantity) => {
       const newItem = {item, quantity}
       let findId = cart.findIndex(element => element.item.id === item.id)
       if (findId < 0 && quantity !== 0){
         setCart((prevState) => [...prevState, newItem])
+        setNavCounter((prev) => prev + parseInt(newItem.quantity))
         setCounter (0)
       }
     };
@@ -34,17 +33,22 @@ export const CartProvider = ({children}) => {
       e.preventDefault()
       setCart ([])
       setCounter (0);
+      setNavCounter (0);
     };
 
     const deleteProd = (id) => {
+      let findId = cart.findIndex(element => element.item.id === id)
+      setNavCounter ((prev) => (prev - cart[findId].quantity))    
       setCart ((prev) => prev.filter ((element) => element.item.id !== id)  );
     };
 
     const handleQuantityLess = (id) => {
       const newCart = [...cart]
       newCart.map ( (item) => {
-        if (item.quantity >0 )
-        {item.item.id === id && (item.quantity -= 1)}
+        if (item.quantity > 1 )
+        {item.item.id === id && (item.quantity -= 1)
+        setNavCounter((prev)=> (prev - 1))
+        }
         return newCart
       })
       setCart(newCart);
@@ -57,6 +61,7 @@ export const CartProvider = ({children}) => {
         return newCart
       })
       setCart(newCart);
+      setNavCounter((prev)=> (prev + 1))
     }
 
     const getTotal = (cart) => {
@@ -79,16 +84,11 @@ export const CartProvider = ({children}) => {
       productsCollection.get()
           .then((response) =>{
               if(response.empty) console.log('Vacío')
-
               setProducts(response.docs.map((doc) => ( {...doc.data(), id: doc.id } )));
           })
           .catch((err) => setError (err))
           .finally (() => setIsLoading (false))
-
    }, [])
-
-
-
 if(isLoading){
   return (
     <div className='spinnerContainer'>
@@ -108,8 +108,7 @@ if(isLoading){
   return <p>Ha habido un error {error.message}</p>
 }else{
   return (
-
-      <CartContext.Provider value={{productC, cart, setCart, addItem, suma, resta, clear, counter, setCounter, deleteProd, handleQuantityPlus, handleQuantityLess, getTotal}}>
+      <CartContext.Provider value={{productC, cart, setNavCounter, navCounter, setCart, addItem, suma, resta, clear, counter, setCounter, deleteProd, handleQuantityPlus, handleQuantityLess, getTotal}}>
          {children}
       </CartContext.Provider>
       );

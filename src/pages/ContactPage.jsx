@@ -7,19 +7,14 @@ import { getFirestore } from "../firebase";
 import { useNavigate } from "react-router-dom";
 
 const ContactPage = () => {
-
     const { currentUser } = useAuth ()
     const [ user, setUser  ] = useState ("")
     const [ comment, setComment ] = useState ("")
-    const [ isLoading, setIsLoading ] = useState (false)
     const [ send , setSend ] = useState (false)
     const navigate = useNavigate();
     
     const handleSubmit = (e) => {
-        e.preventDefault ()
-        
-        setIsLoading(true)
-        
+        e.preventDefault ()       
         const newComment = {
             user:{
                 id: currentUser.uid,
@@ -36,7 +31,6 @@ const ContactPage = () => {
             })
             .catch((err) => console.log("Hubo un error", err))
             .finally(()=>{
-                setIsLoading(false)
                 setSend (true)
             });
     }

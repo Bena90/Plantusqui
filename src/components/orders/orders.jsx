@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Button, Container, Spinner } from 'react-bootstrap';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../../context/authContext';
 import { getFirestore } from '../../firebase';
 import './orders.scss';
@@ -11,6 +11,7 @@ const Orders = () =>{
     const [userOrders, setUserOrders] = useState([]);
     const { currentUser } = useAuth();
     const navigate = useNavigate();
+
     useEffect(() => {
         setLoading(true);
         const db = getFirestore();
@@ -21,20 +22,17 @@ const Orders = () =>{
                 const newUserOrders = res.docs.map((doc) => ({
                     id: doc.id,
                     ...doc.data()
-                  }));
+                }));
                 const filteredUserOrders = newUserOrders.filter(
                 (order) => order.buyer.id === currentUser.uid
                 );
                 setUserOrders(filteredUserOrders);
-                console.log(filteredUserOrders);
             })
             .catch((err) => console.error(err))
             .finally(() => {
             setLoading(false);
-            console.log(orders)
             });
-    }, [setLoading]);
-
+    }, [currentUser.uid]);
 
     return(
         <Container>
@@ -59,7 +57,7 @@ const Orders = () =>{
                 ) : (
                     <div>
                     {userOrders.map((order) => (
-                        <OrderItem key={order.id} {...order} />
+                            <OrderItem key={order.id} {...order} />
                     ))}
                     </div>
                 )}
@@ -70,3 +68,5 @@ const Orders = () =>{
 }
 
 export default Orders;
+
+//<OrderItem key={order.id} product={...order} />

@@ -8,12 +8,15 @@
     width: 100%;
     .containerFooter{
         padding-top: 1rem;
-        background-color: #4A7221;
+        background-color: #10110f;
     }
 
 }
-.list-unstyled{
-    list-style: none;
+.list-group-item{
+    color: white;
+    background-color: #10110f ;
+    text-decoration: none;
+    border: none;
 }
 
 

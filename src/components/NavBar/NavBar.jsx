@@ -8,7 +8,7 @@ import { useContext } from 'react';
 import { useAuth } from '../../context/authContext';
 
 const NavBar = () => {
-    const { cart } = useContext(CartContext);
+    const { cart, navCounter } = useContext(CartContext);
     const { currentUser } = useAuth();
     return(
         <Navbar className='navStyle' collapseOnSelect expand="lg">
@@ -57,7 +57,7 @@ const NavBar = () => {
                                         <img src={cartIcon} alt="cartIcon" />
                                         {cart.length > 0 && 
                                             <div className="indexDiv">
-                                                <span className="cartIndex">{cart.length}</span>
+                                                <span className="cartIndex">{navCounter}</span>
                                         </div>}                                        
                                     </div>
                                 </Link>

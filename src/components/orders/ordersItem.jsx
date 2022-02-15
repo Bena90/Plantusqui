@@ -11,7 +11,7 @@ export const OrderItem = ({ date, id, item, total, buyer }) => {
         <p className=""><strong>Mail: </strong>{buyer.email}</p>
         <p className=""><strong>Order Id: </strong>{id}</p>
         {item.map((item) => (
-          <div key={item.id} className="order-item">
+          <div key={item.item.id} className="order-item">
             <hr />
             <p className=""><strong>Item:  </strong>{`${item.item.name}`}</p>
             <p className=""><strong>Quantity: </strong>{`${item.quantity}`}</p>
@@ -24,3 +24,4 @@ export const OrderItem = ({ date, id, item, total, buyer }) => {
     </div>
   );
 };
+

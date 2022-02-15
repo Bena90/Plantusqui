@@ -14,7 +14,6 @@ const CartPage = () => {
                 <Col>
                     <CartList/>
                 </Col>                
-                
                 {cart.length !== 0 && 
                     <Col>
                         <UserForm/>
@@ -22,9 +21,6 @@ const CartPage = () => {
                 }
             </Row>
             </Container>
-
-
-
     );
 };
 

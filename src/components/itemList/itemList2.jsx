@@ -4,14 +4,10 @@ import Item from "../item/item";
 import { Button, Spinner } from 'react-bootstrap';
 import { getFirestore } from '../../firebase';
 
-
-
-
 function ItemList2 () {
     const [products, setProducts] = useState ([]);
     const [isLoading, setIsLoading] = useState (false);
     const [error, setError] = useState (null);
-    //const urlProducts = 'http://localhost:3001/productos';
 
     useEffect(()=>{
         setIsLoading (true);
@@ -24,31 +20,7 @@ function ItemList2 () {
             })
             .catch((err) => setError (err))
             .finally (() => setIsLoading (false))
-
-// con Try
-//        const getDataFromFirestore = async () => {
-//            try{
-//            const response = await productsCollection.get()     
-//            if (response.empty) {
-//                console.log('No hay productos')
-//            };
-//            setProducts(response.docs.map((doc) => ( {...doc.data(), id: doc.id } )));
-//            }catch(err){
-//                setError(err)
-//            }finally{
-//                setIsLoading(false)
-//            }
-//        };
-//        getDataFromFirestore ();
-
-        //Servidor local
-        //fetch (urlProducts)
-        //    .then((response) => response.json())
-        //    .then((dataProduct) => setProducts(dataProduct))
-        //    .catch((err) => setError (err))
-        //    .finally (() => setIsLoading(false));
     }, [])
-
     if(isLoading){
         return (
             <div className='spinnerContainer'>
@@ -74,5 +46,4 @@ function ItemList2 () {
         )
     }
 }
-
 export default ItemList2;

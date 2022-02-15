@@ -10,7 +10,6 @@ export const AuthProvider = ({ children }) => {
   const [currentUser, setCurrentUser] = useState();
   const [isLoading, setIsLoading] = useState(true)
 
-
   const signup = (email, password) => {
     return auth.createUserWithEmailAndPassword(email, password);
   }
@@ -39,9 +38,6 @@ export const AuthProvider = ({ children }) => {
     
     return auth.signInWithPopup(provider);
   };
-
-
-
 
   useEffect (()=>{
     const unsubscribe = auth.onAuthStateChanged(user => {
