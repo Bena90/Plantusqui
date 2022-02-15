@@ -11,5 +11,4 @@ const ForgotPage = () => {
         </Container>
     )
 }
-
 export default ForgotPage;

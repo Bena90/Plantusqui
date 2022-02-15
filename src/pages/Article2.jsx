@@ -9,7 +9,6 @@ import { useNavigate } from 'react-router-dom';
 const Article2 = () =>{
     const navigate = useNavigate();
     return(
-
         <Container className="articleContainer mb-4">
             <h2>El compostaje</h2>
             <p className='introStyle'>
@@ -73,15 +72,15 @@ const Article2 = () =>{
 
             <h4> ¿Se puede compostar en el piso? </h4>
             <p className="textArticle">
-            Por su puesto que si, siempre que tengas un espacio aireado en la terraza resguardado de
-            las incremencias metereológicas, evitando que le falte agua. Necesitarás una compostadora
-            especial urbana, llamada también vermicompostadora.
+                Por su puesto que si, siempre que tengas un espacio aireado en la terraza resguardado de
+                las incremencias metereológicas, evitando que le falte agua. Necesitarás una compostadora
+                especial urbana, llamada también vermicompostadora.
             </p>
             <p className="textArticle">
-            La única diferencia, a parte del tamaño entre una compostadora de jardín y un compostadora
-            urbana o vermicompostadora es, que en este segundo caso, se necesita para acelerar el proceso
-            la ayuda de una especie de lombriz denominada roja de California (Eisenia foetida).
-            No te preocupes, estas lombrices son como las de toda la vida, inofensivas…
+                La única diferencia, a parte del tamaño entre una compostadora de jardín y un compostadora
+                urbana o vermicompostadora es, que en este segundo caso, se necesita para acelerar el proceso
+                la ayuda de una especie de lombriz denominada roja de California (Eisenia foetida).
+                No te preocupes, estas lombrices son como las de toda la vida, inofensivas…
             </p>
             <h4> ¿Produce mal olor? </h4>
             <p className="textArticle">

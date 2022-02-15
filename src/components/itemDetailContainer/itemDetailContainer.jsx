@@ -6,8 +6,7 @@ import ItemDetail from '../itemDetail/itemDetail';
 import './itemDetailContainer.scss';
 
 const ItemDetailContainer = () => {
-
-
+    
     const {productId} = useParams()
     const [product, setProduct] = useState ([])
     const [isLoading, setIsLoading] = useState (false)
@@ -25,13 +24,6 @@ const ItemDetailContainer = () => {
             })
             .catch((err) => setError (err))
             .finally (() => setIsLoading (false))
-
-//        const urlProduct = `http://localhost:3001/productos/${productId}`
-//        fetch (urlProduct)
-//            .then((res) => res.json())
-//            .then((data) => setProducts(data))
-//            .catch((err) => setError (err))
-//            .finally (() => setIsLoading (false))
     }, [productId])
 
     if (isLoading || !product) {

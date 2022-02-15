@@ -4,11 +4,9 @@ import './pages.scss';
 import photo from '../assets/article1.jpg'
 import { useNavigate } from 'react-router-dom';
 
-
 const Article1 = () =>{
     const navigate = useNavigate();
     return(
-
         <Container className="articleContainer mb-4">
             <h2>¿Cuáles son los mejores fertilizantes para plantas?</h2>
             <p className='introStyle'>
@@ -50,17 +48,17 @@ const Article1 = () =>{
             </p>
             <h4>Fertilizantes orgánicos</h4>
             <p className="textArticle">
-            Son aquellos que cuentan con una procedencia natural, es decir, están elaborados
-            a partir de productos orgánicos y, por ende, son los menos contaminantes y los
-            más respetuosos con el medioambiente. Se caracterizan por enriquecer el suelo,
-            aunque suelen ser bajos en nutrientes, por lo que se debe usar una mayor cantidad
-            o usarlo como complemento de otros abonos más potentes, como los minerales.
+                Son aquellos que cuentan con una procedencia natural, es decir, están elaborados
+                a partir de productos orgánicos y, por ende, son los menos contaminantes y los
+                más respetuosos con el medioambiente. Se caracterizan por enriquecer el suelo,
+                aunque suelen ser bajos en nutrientes, por lo que se debe usar una mayor cantidad
+                o usarlo como complemento de otros abonos más potentes, como los minerales.
             </p>
             <p className="textArticle">
-            Uno de los más usados es el compost orgánico, aunque también son comunes el
-            estiércol, la turb, el humus o los extractos de algas, que cuentan con una gran
-            cantidad de nutrientes y son perfectos para combatir plagas, problemas de aclimatación
-            o sequía.
+                Uno de los más usados es el compost orgánico, aunque también son comunes el
+                estiércol, la turb, el humus o los extractos de algas, que cuentan con una gran
+                cantidad de nutrientes y son perfectos para combatir plagas, problemas de aclimatación
+                o sequía.
             </p>
             <h4>Fertilizantes minerales</h4>
             <p className="textArticle">
@@ -95,8 +93,6 @@ const Article1 = () =>{
             <hr />
             <Button variant='success' className="mt-2" onClick={()=>navigate('/')}>Volver</Button>
         </Container>
-
     )
 }
-
 export default Article1;

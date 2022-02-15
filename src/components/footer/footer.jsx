@@ -6,7 +6,6 @@ import footer from '../../assets/footer.png'
 import { Col, Container, Row } from 'react-bootstrap';
 
 const Footer = () => {
-
     return (
         <footer className="main-footer">
             <img src={footer} className="w-100" alt="" />
@@ -40,17 +39,14 @@ const Footer = () => {
                         </Row>
                     </div>
                 </Container>
-
                 <div className="pt-2 pb-2">
                         <p className='col-sm'>
                             &copy;{new Date().getFullYear()} Plantusqui | All right reserve | Terms Of Service | Plantusqui by Esteban Benabarre
                         </p>
                 </div>
             </div>
-            
         </footer>
     )
-
 }
 
 export default Footer;

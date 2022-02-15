@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 export const OrderItem = ({ date, id, item, total, buyer }) => {
   const newDate = new Date(date * 1000);
 

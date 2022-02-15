@@ -8,7 +8,6 @@ import './itemDetailContainer.scss';
 const ItemDetailContainer = () => {
 
     const { addItem } = useContext(CartContext);
-
     const {productId} = useParams()
     const [product, setProducts] = useState ([])
     const [isLoading, setIsLoading] = useState (false)
@@ -24,7 +23,6 @@ const ItemDetailContainer = () => {
             .catch((err) => setError (err))
             .finally (() => setIsLoading (false))
     }, [productId])
-
     if (isLoading || !product) {
         return (
             <Button variant="success" disabled>

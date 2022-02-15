@@ -1,5 +1,5 @@
 import { Container } from "react-bootstrap";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const NotFoundPage = () => {
     const navigate = useNavigate()
@@ -14,7 +14,6 @@ const NotFoundPage = () => {
             </div>
         </Container>
     );
-
 };
 
 export default NotFoundPage;

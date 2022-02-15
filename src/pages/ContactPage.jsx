@@ -34,7 +34,6 @@ const ContactPage = () => {
                 setSend (true)
             });
     }
-    console.log(currentUser)
     return (
         <Container>
             { (currentUser !== null) ?(
@@ -51,7 +50,7 @@ const ContactPage = () => {
                             onChange = {(e) => setUser(e.target.value)}
                         />
                         <label htmlFor="comentario"> Comentario: </label>
-                        <input
+                        <textarea 
                             className="comment"
                             type="text"
                             name='comentario'
@@ -60,12 +59,11 @@ const ContactPage = () => {
                             required
                             onChange = {(e) => setComment(e.target.value)}
                         />
-                        
                         {(send === false) ? (<input className="btn btn-success m-3" type="submit" value="Enviar" />
                         ):(
                             <div className="d-flex flex-column align-items-center p-2">
                                 <input className="btn btn-success m-3" type="submit" value="Enviar" disabled/>
-                                <div class="alert alert-success" role="alert">
+                                <div className="alert alert-success" role="alert">
                                     Comentario enviado correctamente! En breves nos pondremos en contacto.
                                 </div>
                             </div>
@@ -82,5 +80,4 @@ const ContactPage = () => {
         </Container>
     )
 }
-
 export default ContactPage;

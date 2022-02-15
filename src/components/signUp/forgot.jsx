@@ -5,6 +5,7 @@ import { useAuth } from '../../context/authContext';
 import './signUp.scss';
 
 const ForgotPassword = () => {
+    
     const navigate = useNavigate();
     const { resetPassword } = useAuth();
     const emailRef = useRef();
@@ -25,7 +26,6 @@ const ForgotPassword = () => {
         }
         setIsLoading(false);
     }
-
     return(
         <Container>
             <Card className="m-4">
@@ -50,7 +50,6 @@ const ForgotPassword = () => {
             </div>
         </Container>
         )
-
 };
 
 export default ForgotPassword;

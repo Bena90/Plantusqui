@@ -9,11 +9,8 @@ import div from '../assets/div.png'
 
 import { useNavigate } from 'react-router-dom';
 
-
 const HomePage = () => {
-
     const navigate = useNavigate();
-
     return (
         <>
             <Container className ="homePagaContainer mb-4">

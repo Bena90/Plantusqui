@@ -4,7 +4,6 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../../context/authContext';
 import './signUp.scss';
 
-
 const Login = () => {
     const navigate = useNavigate();
     const { login, signInWithGoogle } = useAuth();
@@ -70,7 +69,6 @@ const Login = () => {
             </div>
         </Container>
         )
-
 };
 
 export default Login;

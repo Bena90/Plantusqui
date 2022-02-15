@@ -46,5 +46,4 @@ const AboutPage = () => {
         </Container>
     )
 }
-
 export default AboutPage;

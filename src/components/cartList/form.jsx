@@ -9,7 +9,6 @@ import { useNavigate } from "react-router-dom";
 import { useAuth } from "../../context/authContext";
 
 export const UserForm = () => {
-
     const { cart, getTotal, setCart, setNavCounter } = useContext(CartContext);
     const { currentUser } = useAuth ();
     const [ user, setUser  ] = useState ("");
@@ -30,7 +29,6 @@ export const UserForm = () => {
             total: getTotal (cart),
             date: firebase.firestore.Timestamp.fromDate(new Date())
         };
-
         const db = getFirestore();
         db.collection('orders')
             .add(newOrder)
@@ -42,7 +40,6 @@ export const UserForm = () => {
                 setCart([])
                 setNavCounter (0)
             });
-            
     };
     return(
             <Container className="formContainer">

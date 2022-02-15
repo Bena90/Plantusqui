@@ -68,5 +68,3 @@ const Orders = () =>{
 }
 
 export default Orders;
-
-//<OrderItem key={order.id} product={...order} />

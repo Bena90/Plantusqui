@@ -6,7 +6,6 @@ import { CartContext } from "../context/cartContext";
 
 const ProductDetailsPage = () => {
     const { setCounter } = useContext (CartContext);
-
     const navigate = useNavigate ();
 
     const comeBack = () => {
@@ -26,5 +25,3 @@ const ProductDetailsPage = () => {
     )
 };
 export default ProductDetailsPage;
-
-// () => navigate ("/products")

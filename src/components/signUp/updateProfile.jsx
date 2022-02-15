@@ -71,7 +71,6 @@ const UpdateProfile = () => {
             </div>
         </Container>
         )
-
 };
 
 export default UpdateProfile;

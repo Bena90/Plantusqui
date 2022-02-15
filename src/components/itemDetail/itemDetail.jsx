@@ -6,7 +6,6 @@ import { useContext } from 'react';
 import { CartContext } from '../../context/cartContext';
 import { useNavigate } from "react-router-dom";
 
-
 const ItemDetail = ({product}) => {
     const navigate = useNavigate();
     const { addItem, counter , suma , resta, cart, deleteProd } = useContext(CartContext);
@@ -20,7 +19,6 @@ const ItemDetail = ({product}) => {
         return true;
         }
     }
-
     return (
         <Container>
             <div className="detailContainer">
@@ -33,7 +31,6 @@ const ItemDetail = ({product}) => {
                     <p className ="productDetails">{product.fullDetails}</p>
                     <p><strong>Precio: $ {product.price}</strong></p>
                     <hr/>
-                    
                     { checkCart() ? (
                     <div className="buttonBuy">
                         <Button variant="success" size ='sm' onClick={() => navigate('/cart')}> Ir del Carro </Button>
@@ -45,12 +42,8 @@ const ItemDetail = ({product}) => {
                         <Counter counter={counter} suma={suma} resta={resta}/>
 
                         <Button variant="success" size ='sm' onClick={handleClick}>Comprar</Button>
-
                     </div>                        
                     )}
-
-
-
                 </div>
             </div>
         </Container>

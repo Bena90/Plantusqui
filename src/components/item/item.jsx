@@ -2,7 +2,6 @@ import { Button } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import './item.scss';
 
-
 const Item = ({ product }) => {
     const navigate = useNavigate();
     return (   

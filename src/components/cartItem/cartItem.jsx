@@ -3,10 +3,7 @@ import { Container, Button, Col, Row } from 'react-bootstrap';
 import { CartContext } from '../../context/cartContext';
 import './cartItem.scss';
 
-
-
 const CartItem = ( { product, remove } ) => {
-
     const { handleQuantityPlus, handleQuantityLess } = useContext(CartContext);
     return(
         <Container>
@@ -27,8 +24,7 @@ const CartItem = ( { product, remove } ) => {
                     <Button variant="danger" size="sm" onClick={ () => remove (product.item.id)}>Eliminar</Button>
                 </Col>
             </Row>
-        </Container>
-        
+        </Container>   
     )
 }
 export default CartItem;
