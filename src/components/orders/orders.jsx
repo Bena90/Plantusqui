@@ -32,7 +32,7 @@ const Orders = () =>{
             .finally(() => {
             setLoading(false);
             });
-    }, [currentUser.uid]);
+    }, []);
 
     return(
         <Container>
