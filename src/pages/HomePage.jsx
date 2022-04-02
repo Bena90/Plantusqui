@@ -74,7 +74,7 @@ const HomePage = () => {
                         <Col xs={12} md={4}>
                             <img src={article1} alt="" />
                         </Col>
-                        <Col xs={12} md={8} className="text-article">
+                        <Col xs={12} md={8} className="mt-2 text-article">
                             <h3>¿Usas fertilizantes?</h3>
                             <p>Hola amigues de Plantusqui! Hoy les traemos data útil sobre fertilizantes, sus tipos y usos. Nos parece muy importante entender que nuestras plantas necesitan un buen alimento para su sano y buen crecimiento. 
                             Hacernos una rutina para darle morfi a las plantus es tan necesario como regarlas 🌲.
@@ -89,7 +89,7 @@ const HomePage = () => {
                             <p>
                                 Buenas buenas! Hoy les contamos un poco sobre este el compost. Vamos a hacer una introducción sobre qué se trata y evacuamos algunas dudas. 🤩
                             </p>
-                            <Button variant="success" onClick={()=>navigate("/article2")} size='sm'>Ver más 💚</Button>
+                            <Button variant="success" className="mb-1" onClick={()=>navigate("/article2")} size='sm'>Ver más 💚</Button>
                         </Col>
                         <Col xs={12} md={4}>
                             <img src={article2} alt="" />
