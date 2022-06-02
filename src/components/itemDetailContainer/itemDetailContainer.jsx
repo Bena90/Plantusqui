@@ -1,32 +1,14 @@
-import { useEffect, useState} from 'react';
 import { Button, Spinner } from 'react-bootstrap';
 import { useParams } from 'react-router-dom';
-import { getFirestore } from '../../firebase';
+import useGet from '../../hook/useGet';
 import ItemDetail from '../itemDetail/itemDetail';
 import './itemDetailContainer.scss';
 
 const ItemDetailContainer = () => {
-    
     const {productId} = useParams()
-    const [product, setProduct] = useState ([])
-    const [isLoading, setIsLoading] = useState (false)
-    const [error, setError] = useState (null)
+    const { products, isLoading, error } = useGet( productId )
 
-    useEffect(()=> {
-        setIsLoading (true);
-        const db = getFirestore()
-        const productsCollection = db.collection('products')
-        const productSelect = productsCollection.doc(productId)
-        productSelect.get()
-            .then((response) => {
-                if(!response.exists) {console.log('El producto no existe')};
-                setProduct({...response.data(), id: response.id});
-            })
-            .catch((err) => setError (err))
-            .finally (() => setIsLoading (false))
-    }, [productId])
-
-    if (isLoading || !product) {
+    if (isLoading || !products) {
         return (
             <div className='spinnerContainer'>
                 <Button variant="success" disabled>
@@ -40,7 +22,7 @@ const ItemDetailContainer = () => {
     }else{
         return (
             <div className = "  ">
-                <ItemDetail product={product}/>
+                <ItemDetail product={products}/>
                 <hr />
             </div>
         )

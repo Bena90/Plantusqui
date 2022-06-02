@@ -1,4 +1,7 @@
 .main-footer{
+    h5 {
+        text-align: center;
+    }
     font-family: 'Montserrat', sans-serif;
 
     color: white;
@@ -29,4 +32,13 @@
         width: 32px;
         height: 32px;
     }
+}
+
+.register{
+    @media (max-width: 768px) {
+        p {
+            font-size: 12px;
+        }
+    }   
+
 }

@@ -8,17 +8,18 @@ import { useNavigate } from "react-router-dom";
 
 const ItemDetail = ({product}) => {
     const navigate = useNavigate();
-    const { addItem, counter , suma , resta, cart, deleteProd } = useContext(CartContext);
+    const { counter , suma , resta, cart, addItem, deleteProd } = useContext(CartContext);
 
     const handleClick = () => {
         addItem(product, counter)
-    }
-
-    const checkCart = () =>{
-        if (cart.findIndex(element => element.item.id === product.id) >= 0) {
-        return true;
-        }
-    }
+      }
+    
+      const checkCart = () =>{
+          if (cart.findIndex(element => element.item.id === product.id) >= 0) {
+          return true;
+          }
+      }
+      
     return (
         <Container>
             <div className="detailContainer">

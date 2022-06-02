@@ -3,7 +3,7 @@ import { Button } from 'react-bootstrap';
 
 const Counter = ({suma, resta, counter}) => {
     return(
-        <div className="counterStyle">
+        <div className="counterStyle">       
             <Button variant="success" size="sm" onClick = {resta}> - </Button>
             <p className="counter">{counter}</p>
             <Button variant="success" size="sm" onClick = {suma}> + </Button>

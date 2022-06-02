@@ -18,6 +18,7 @@ export const CartProvider = ({children}) => {
       setCounter ((prevCounter) => prevCounter - 1);
   }};
 
+
   /* ------- Cart ------- */
     const [cart, setCart] = useState ([]);
     const addItem = (item, quantity) => {
@@ -28,6 +29,7 @@ export const CartProvider = ({children}) => {
         setNavCounter((prev) => prev + parseInt(newItem.quantity))
         setCounter (0)
       }
+      console.log (navCounter)
     };
     const clear = (e) => {
       e.preventDefault()
@@ -45,13 +47,13 @@ export const CartProvider = ({children}) => {
     const handleQuantityLess = (id) => {
       const newCart = [...cart]
       newCart.map ( (item) => {
-        if (item.quantity > 1 )
-        {item.item.id === id && (item.quantity -= 1)
-        setNavCounter((prev)=> (prev - 1))
-        }
+        if (item.quantity >0 )
+        {item.item.id === id && (item.quantity -= 1)}
+        
         return newCart
       })
       setCart(newCart);
+      setNavCounter((prev)=> (prev - 1))
     }
 
     const handleQuantityPlus = (id) => {
@@ -108,7 +110,8 @@ if(isLoading){
   return <p>Ha habido un error {error.message}</p>
 }else{
   return (
-      <CartContext.Provider value={{productC, cart, setNavCounter, navCounter, setCart, addItem, suma, resta, clear, counter, setCounter, deleteProd, handleQuantityPlus, handleQuantityLess, getTotal}}>
+
+      <CartContext.Provider value={{productC, cart, navCounter, setCart, addItem, suma, resta, clear, counter, setCounter, deleteProd, handleQuantityPlus, handleQuantityLess, getTotal}}>
          {children}
       </CartContext.Provider>
       );

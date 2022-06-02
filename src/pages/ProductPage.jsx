@@ -5,13 +5,13 @@ import ItemList2 from "../components/itemList/itemList2";
 const ProductPage = () => {
     const navigate = useNavigate();
     return (
-        <Container>
+        <Container className="productPageContainer">
                 <div className="productPage">
-                    <h1>Productos disponibles:</h1>
+                    <h2>Productos disponibles:</h2>
                     <ItemList2/>  
                 </div>
                 <div className="d-flex justify-content-center">
-                    <Button variant='success' className="mt-4" onClick={()=>navigate('/')}>Volver</Button>
+                    <button className="btn btn-success btn-back mt-4" onClick={()=>navigate('/')}>Volver</button>
                 </div>
         </Container>
     );

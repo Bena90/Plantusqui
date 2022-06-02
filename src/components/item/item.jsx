@@ -14,7 +14,7 @@ const Item = ({ product }) => {
                     <p>Nombre: {product.name}</p>
                     <p>Descripción: {product.description}</p>
                     <p ><strong>Precio: $ {product.price}</strong></p>
-                    <Button className="itemButton" size="sm" variant="success" onClick={() => navigate(`/products/${product.id}`)}>Detalle</Button>
+                    <button className="itemButton btn btn-success" size="sm" variant="success" onClick={() => navigate(`/products/${product.id}`)}>Detalle</button>
                 </div>
             </div>
             );

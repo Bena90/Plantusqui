@@ -1,13 +1,12 @@
-import { useContext } from 'react';
-import { CartContext } from '../../context/cartContext';
-import CartItem from '../cartItem/cartItem';
 import { Container } from 'react-bootstrap';
 import { Link } from "react-router-dom";
 import './cartList.scss';
 import emptyCart from '../../assets/preview.png'
+import useMap from '../../hook/useMap';
 
 const CartList = () =>{
-    const { cart, deleteProd } = useContext(CartContext);
+    const { cartRender, cart } = useMap ();
+
     if (cart.length === 0){
         return (
             <Container>
@@ -25,8 +24,9 @@ const CartList = () =>{
     }else{
         return(
                 <div className="cartListContainer">
-                    {cart.map ((product) => ( <CartItem key={product.item.id} product={product} remove={deleteProd}/>) )}
+                    {cartRender ()}
                 </div>
-    )};
+        )
+    };
 };
 export default CartList;

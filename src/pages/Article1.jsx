@@ -91,7 +91,7 @@ const Article1 = () =>{
                 este fertilizante se puede encontrar en formato líquido o granulado
             </p>
             <hr />
-            <Button variant='success' className="mt-2" onClick={()=>navigate('/')}>Volver</Button>
+            <button className="btn btn-success mt-2" onClick={()=>navigate('/')}>Volver</button>
         </Container>
     )
 }

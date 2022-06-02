@@ -12,18 +12,20 @@
     transition: all 0.4s ease-out;
     margin: 10px;
     font-family: 'Montserrat', sans-serif;
-    font-size: 20px;
+    font-size: 15px;
 
 
     .btn-success {
         background-color: #ccedd2;
         color: #655c56;
         border-color: #94d3ac;
-        font-size: 20px;
+        font-size: 15px;
+        width: 100%;
       }
 
     .btn-success:hover{
-        background-color: #94d3ac;
+        background-color: var(--global-color-pink);
+        border-color: var(--global-color-orange);
     }
     
     .itemImg{

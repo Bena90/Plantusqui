@@ -20,11 +20,11 @@ const CartItem = ( { product, remove } ) => {
                         <button onClick={() => handleQuantityPlus(product.item.id)}> + </button>
                     </div>
                     <p className="subTotalCart">Sub-Total: ${product.quantity * product.item.price}</p>
-
                     <Button variant="danger" size="sm" onClick={ () => remove (product.item.id)}>Eliminar</Button>
                 </Col>
             </Row>
-        </Container>   
+        </Container>
+
     )
 }
 export default CartItem;

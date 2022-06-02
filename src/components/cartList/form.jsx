@@ -9,15 +9,19 @@ import { useNavigate } from "react-router-dom";
 import { useAuth } from "../../context/authContext";
 
 export const UserForm = () => {
+
     const { cart, getTotal, setCart, setNavCounter } = useContext(CartContext);
-    const { currentUser } = useAuth ();
-    const [ user, setUser  ] = useState ("");
-    const [ phone, setPhone ] = useState ("");
-    const [ email, setEmail ] = useState ("");
+    const { currentUser } = useAuth ()
+    const [ user, setUser  ] = useState ("")
+    const [ phone, setPhone ] = useState ("")
+    const [ email, setEmail ] = useState ("")
 
     let navigate = useNavigate();
     const handleSubmit = (e) => {
         e.preventDefault ();
+        if(!user || !phone){
+            return
+        }
         const newOrder = {
             buyer:{
                 id: currentUser.uid,

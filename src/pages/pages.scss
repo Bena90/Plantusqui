@@ -1,62 +1,76 @@
-
 // General //
-
-h1{
-    font-family: 'Dongle', sans-serif;
-    text-align: center;
-    font-size:  60px;
-    color: #94d3ac;
-    margin-top: 8px;
+.btn-success:hover{
+    background-color: var(--global-color-pink);
+    border-color: var(--global-color-orange);
+    color: #655c56;
 }
+h1{
+    font-family: 'itim', sans-serif;
+    text-align: center;
+    font-size:  45px;
+    color: #94d3ac;
+    margin: 30px 0px;
+}
+
+
 
 // HOME PAGE //
 
 .homePagaContainer{
-
+    .carousel{
+        height: 50vh;
+    }
     .carousel-caption{
-        position:absolute;
-        right:0%;
-        left:0%;
+
     }
     .carouselContainer{
         h3, p {
             font-family: 'Montserrat', sans-serif;
             font-weight: 400;
             text-indent: 30px;
-
+            height: 100%;
             color:white;
         }
         .divCarousel{
             border-radius: 10px;
             background-color: rgba(0, 0, 0,0.3);
             width: 100%;
-            
+        
         }
     }
     .articleContainer{
+        h2{
+            font-size: 35px;
+        }
         max-height: max-content;
-        .articleDivision{
-            height: 100px;
+        @media (max-width: 768px)
+        {
+            button {
+                width: 100%;
+            }
         }
         .btn-success {
             background-color: #ccedd2;
             color: #655c56;
             border-color: #94d3ac;
             font-size: 1.1rem;
+            margin-bottom: 1.2rem ;
           }
         .btn-success:hover{
-            background-color: #94d3ac;
+                background-color: var(--global-color-pink);
+                border-color: var(--global-color-orange);
         }
         .articleRow{
             margin-top: 20px;
-            margin-bottom: 20px;
+            margin-bottom: 0px;
             align-items: center;
         }
-
         img{
             width: 100%;
             border-radius: 2%;
-            
+        }
+        hr{
+            margin: 0;
         }
         .text-article{
             font-family: 'Montserrat', sans-serif;
@@ -66,9 +80,22 @@ h1{
             letter-spacing: normal;
             line-height: 1.7;
             text-align: left;
+}}}
 
-        }
-
+@media (max-width: 768px){
+    h1{
+        font-family: 'itim', sans-serif;
+        text-align: center;
+        font-size:  30px;
+        color: #94d3ac;
+        margin: 30px 0px;
+    }
+    .articleContainer h2{
+          font-size: 25px !important;
+        
+    }
+    .text-article{
+        font-size: 14px !important;
     }
 }
 
@@ -93,7 +120,7 @@ h1{
     text-align: left;
     margin-bottom: 30px;
     h2{
-        font-family: 'Dongle', sans-serif;
+        font-family: 'itim', sans-serif;
         text-align: center;
         font-size:  50px;
         color: #94d3ac;
@@ -101,6 +128,20 @@ h1{
 
     }
 }
+// PRODUCT PAGE //
+.productPageContainer{
+    h2{
+        font-family: 'Itim', cursive;
+        color: #94d3ac;
+        font-size: 35px;
+        margin: 1.5rem 0rem;
+        text-align: center;
+    }
+    .btn-back {
+        font-size: 17px;
+    }
+}
+
 // ARTICLE PAGE //
 
 .articleContainer{
@@ -161,20 +202,49 @@ h1{
     strong{
         font-weight: 600;
     }
-
 }
 
 // CONTACT PAGE // 
 .contactStyle{
     display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color: #655c56;
+
+    .textContainer{
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 400;
+        h4 {
+            text-align: center;
+            font-weight: 400;
+        }
+        p {
+            text-align: center;
+        }
+    }
+
+    .formContainer{
+        display: flex;
+        justify-content: center;
+    }
+    form{
+    width: 100%;
+    max-width: 650px;
+    display: flex;
+    justify-content: center;
     flex-direction: column;
     align-items: center;
     font-family: 'Montserrat', sans-serif;
     box-shadow: 0.1rem 0.1rem 0.5rem rgba(37, 10, 10, 0.4);
     border-radius: 5px;
+    padding: 0.4rem 2rem;
+    }
     h2{
         font-family: 'Itim', cursive;
         color: #94d3ac;
+        font-size: 35px;
+        margin: 1.5rem 0rem;
+        text-align: center;
     }
     .comment{
         height: 200px;

@@ -27,8 +27,8 @@ const Login = () => {
     }
 
     const handleGoogleAuth = (e) =>{
-
         e.preventDefault();
+        console.log(e)
         signInWithGoogle()
         .then((res)=>{
             console.log(res)
