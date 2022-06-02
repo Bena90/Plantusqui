@@ -3,7 +3,6 @@ import { Navbar, Nav, Container, NavDropdown } from 'react-bootstrap';
 import { CartContext } from '../../context/cartContext';
 import { useContext } from 'react';
 import { useAuth } from '../../context/authContext';
-import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 
 import './NavBar.scss'
